@@ -1,5 +1,5 @@
 public class Actions {
-    public static String WithoutSpaces(String str) {
+    public static String DeleteExtraSpaces(String str) {
         str = str.trim();
         StringBuilder sb = new StringBuilder(str);
         boolean space = true;
