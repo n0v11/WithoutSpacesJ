@@ -4,11 +4,13 @@ public class Actions {
         StringBuilder sb = new StringBuilder(str);
         boolean space = true;
         for (int i = 0; i < sb.length(); i++) {
-            if (sb.charAt(i) == ' ' && space) {
-                sb.deleteCharAt(i);
-                i--;
-            } else if (sb.charAt(i) == ' ' && !space) {
-                space = true;
+            if (sb.charAt(i) == ' ') {
+                if (space) {
+                    sb.deleteCharAt(i);
+                    i--;
+                } else {
+                    space = true;
+                }
             } else {
                 space = false;
             }
