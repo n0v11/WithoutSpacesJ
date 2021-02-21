@@ -1,13 +1,13 @@
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class ActionsTest {
 
     @Test
     public void GoodString() {
-        assertEquals("Hello, world!", Actions.DeleteExtraSpaces("Hello, world!"));
-    }
+        assertEquals("Hello, world!", Actions.DeleteExtraSpaces("Hello, world!")); }
 
     @Test
     public void AllStringOfSpaces(){
@@ -26,8 +26,7 @@ public class ActionsTest {
 
     @Test
     public void TwoAndMoreSpacesInOneString(){
-        assertEquals("1 2 3 4 5", Actions.DeleteExtraSpaces("1   2 3   4          5"));
-    }
+        assertEquals("1 2 3 4 5", Actions.DeleteExtraSpaces("1   2 3   4          5"));}
 
     @Test
     public void SpacesAtStartAndEndOfTheString(){
